@@ -10,7 +10,19 @@ from nltk.stem import WordNetLemmatizer
 lemmatizer = WordNetLemmatizer()
 
 #intents = json.loads(open('intents.json').read())
-intents = json.loads(open('D:/Project/Python AI Projects/Chatbot/intents.json').read())
+#intents = json.loads(open('D:/Project/Python AI Projects/Chatbot/intents.json').read())
+try:
+    with open('intents.json', 'r') as file:
+        intents = json.load(file)
+except FileNotFoundError:
+    print("The file 'intents.json' was not found.")
+    intents = None
+except json.JSONDecodeError as e:
+    print(f"Error decoding JSON: {e}")
+    intents = None
+except Exception as e:
+    print(f"An unexpected error occurred: {e}")
+    intents = None
 words = []
 classes = []
 documents = []
