@@ -1,0 +1,25 @@
+{
+    "questions": [
+      {
+        "id": 1,
+        "question": "Do you smoke?",
+        "options": ["yes", "no"]
+      },
+      {
+        "id": 2,
+        "question": "Do you consume much oily food?",
+        "options": ["yes", "no"]
+      },
+      {
+        "id": 3,
+        "question": "Are you an alcohol addict?",
+        "options": ["yes", "no"]
+      },
+      {
+        "id": 4,
+        "question": "Do you eat much red meat?",
+        "options": ["yes", "no"]
+      }
+    ]
+  }
+  
