@@ -33,14 +33,14 @@ class RegisterScreen(tk.Tk):
         self.home_screen = home_screen
 
     def register(self):
-        # Placeholder for registration logic
-        # For simplicity, store the username and password in a dictionary
         username = self.username_entry.get()
         password = self.password_entry.get()
 
         if not username or not password:
             messagebox.showerror("Registration Failed", "Username and password are required")
         else:
+            with open("user_credentials.txt", "a") as file:
+                file.write(f"{username}:{password}\n")
             messagebox.showinfo("Registration", "Registration successful!")
             self.withdraw()
             self.home_screen.deiconify()

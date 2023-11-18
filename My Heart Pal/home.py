@@ -4,6 +4,17 @@ from tkinter import messagebox
 import register
 import dashboard
 
+def authenticate(username, password):
+    try:
+        with open("user_credentials.txt", "r") as file:
+            for line in file:
+                stored_username, stored_password = line.strip().split(":")
+                if stored_username == username and stored_password == password:
+                    return True
+    except FileNotFoundError:
+        return False
+    return False
+
 class HomeScreen(tk.Tk):
     def __init__(self):
         super().__init__()
@@ -32,10 +43,17 @@ class HomeScreen(tk.Tk):
         self.register_button.pack(pady=5)
 
     def login(self):
-        # Placeholder for login logic
-        # For demonstration purposes, accept any values
-        self.withdraw()
-        dashboard.DashboardScreen(self)
+        username = self.username_entry.get()
+        password = self.password_entry.get()
+
+        if not username or not password:
+            messagebox.showerror("Login Failed", "Username and password are required")
+        elif authenticate(username, password):
+            self.withdraw()
+            self.state('zoomed')  # Set the state to 'zoomed' when deiconifying
+            dashboard.DashboardScreen(self)
+        else:
+            messagebox.showerror("Login Failed", "Invalid username or password")
 
     def register(self):
         self.withdraw()
