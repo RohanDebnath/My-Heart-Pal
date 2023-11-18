@@ -6,6 +6,8 @@ class DashboardScreen(tk.Tk):
         super().__init__()
         self.title("Dashboard")
         self.geometry("300x150")
+        self.state('zoomed')  # Maximize the window
+        self.resizable(False, False)  # Set resizable to False for both width and height
 
         self.label = tk.Label(self, text="Welcome to Dashboard", font=("Helvetica", 14))
         self.label.pack(pady=10)

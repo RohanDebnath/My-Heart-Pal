@@ -9,6 +9,8 @@ class HomeScreen(tk.Tk):
         super().__init__()
         self.title("Login")
         self.geometry("300x150")
+        self.state('zoomed')  # Maximize the window
+        self.resizable(False, False)  # Set resizable to False for both width and height
 
         self.label = tk.Label(self, text="Welcome to Home Screen", font=("Helvetica", 14))
         self.label.pack(pady=10)
