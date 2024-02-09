@@ -53,5 +53,6 @@
             "tags":"name",
             "patterns":["What is your name","What's your name","Name","Your Name","Who are you","What shall I call you","Name please"],
             "responses":["I am a chatbot, I recommend people whether there is a possible risk of heart disorder and if its time to consult a doctor"]
-        } 
+        }
+        
 ]}

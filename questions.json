@@ -1,25 +1,104 @@
 {
-    "questions": [
-      {
-        "id": 1,
-        "question": "Do you smoke?",
-        "options": ["yes", "no"]
-      },
-      {
-        "id": 2,
-        "question": "Do you consume much oily food?",
-        "options": ["yes", "no"]
-      },
-      {
-        "id": 3,
-        "question": "Are you an alcohol addict?",
-        "options": ["yes", "no"]
-      },
-      {
-        "id": 4,
-        "question": "Do you eat much red meat?",
-        "options": ["yes", "no"]
-      }
-    ]
-  }
-  
+  "questions": [
+    {
+      "id": 1,
+      "question": "Do you face Shortness of breath?",
+      "options": ["yes", "no"]
+    }, 
+    {
+      "id": 2,
+      "question": "Do you face Fluttering in the chest?",
+      "options": ["yes", "no"]
+    },  
+    {
+      "id": 3,
+      "question": "Do you face Racing heartbeat (tachycardia)?",
+      "options": ["yes", "no"]
+    },  
+    {
+      "id": 4,
+      "question": "Do you face Slow heartbeat (bradycardia)?",
+      "options": ["yes", "no"]
+    },   
+    {
+      "id": 5,
+      "question": "Are you irregular on exercise/ physically inactive?",
+      "options": ["yes", "no"]
+    },
+    {
+      "id": 6,
+      "question": "Do you smoke?",
+      "options": ["yes", "no"]
+    },
+    {
+      "id": 7,
+      "question": "Do you have secound hand smoke exposure?",
+      "options": ["yes", "no"]
+    },
+    {
+      "id": 8,
+      "question": "Do you consume much oily food?",
+      "options": ["yes", "no"]
+    },
+    {
+      "id": 9,
+      "question": "Are you an alcohol addict?",
+      "options": ["yes", "no"]
+    },
+    {
+      "id": 10,
+      "question": "Do you eat much red meat?",
+      "options": ["yes", "no"]
+    },
+    {
+      "id": 11,
+      "question": "Do you have Swelling of the hands, ankles or feet?",
+      "options": ["yes", "no"]
+    },
+    {
+      "id": 12,
+      "question": "Do you have Dry or persistent cough?",
+      "options": ["yes", "no"]
+    },
+    {
+      "id": 13,
+      "question": "Do you have Skin rashes or unusual spots?",
+      "options": ["yes", "no"]
+    },
+    {
+      "id": 14,
+      "question": "Do you have Pale gray or blue skin or lips (cyanosis)?",
+      "options": ["yes", "no"]
+    },
+    {
+      "id": 15,
+      "question": "Do you suffer from Obesity?",
+      "options": ["yes", "no"]
+    },
+    {
+      "id": 16,
+      "question": "Have previous records of High blood pressure?",
+      "options": ["yes", "no"]
+    },
+    {
+      "id": 17,
+      "question": "Have previous records of Cholesterol?",
+      "options": ["yes", "no"]
+    },
+    {
+      "id": 18,
+      "question": "Have previous records of Diabeties?",
+      "options": ["yes", "no"]
+    },
+    {
+      "id": 19,
+      "question": "Do you faint now and then (syncope)?",
+      "options": ["yes", "no"]
+    },
+    {
+      "id": 20,
+      "question": "Anyone in your family history have heart problems?",
+      "options": ["yes", "no"]
+    }
+  ]
+}
