@@ -38,14 +38,29 @@ myImage.place(x=-200,y=-20)
 Heading_entry = Frame(root, width=800, height=190, bg="#FDD0D3", highlightthickness=0)
 Heading_entry.place(x=0, y=0)
 Label(Heading_entry, text="Registration No:", font="Arial 13", bg="#FDD0D3", fg="black").place(x=10, y=20)
-Label(Heading_entry, text="Date:", font="Arial 13", bg="#FDD0D3", fg="black").place(x=450, y=20)
+Label(Heading_entry, text="Date:", font="Arial 13", bg="#FDD0D3", fg="black").place(x=550, y=20)
 Label(Heading_entry, text="Patient Name:", font="Arial 13", bg="#FDD0D3", fg="black").place(x=10, y=100)
-Label(Heading_entry, text="Date of Birth:", font="Arial 13", bg="#FDD0D3", fg="black").place(x=450, y=100)
+Label(Heading_entry, text="Date of Birth:", font="Arial 13", bg="#FDD0D3", fg="black").place(x=550, y=100)
 
 Label(Heading_entry, font="Arial 13", bg="white",width=30, fg="black").place(x=150, y=20)
-Label(Heading_entry, font="Arial 13", bg="white",width=30, fg="black").place(x=550, y=20)
+Label(Heading_entry, font="Arial 13", bg="white",width=30, fg="black").place(x=650, y=20)
 Label(Heading_entry, font="Arial 13", bg="white",width=30, fg="black").place(x=150, y=100)
-Label(Heading_entry, font="Arial 13", bg="white",width=30, fg="black").place(x=550, y=100)
+Label(Heading_entry, font="Arial 13", bg="white",width=30, fg="black").place(x=650, y=100)
+
+Registration=IntVar()
+reg_entry=Entry(Heading_entry,textvariable=Registration,width=30,font="Arial 15",bg="white",fg="black",).place(x=150,y=20)
+
+Date=StringVar()
+today=date.today()
+d1=today.strftime("%d/%m/%y")
+date_entry=Entry(Heading_entry,textvariable=Date,width=15,font="Arial 15",bg="white",fg="black").place(x=650,y=20)
+Date.set(d1)
+
+Name=StringVar()
+name_entry=Entry(Heading_entry,textvariable=Name,width=30,font="Arial 15",bg="white",fg="black",).place(x=150,y=100)
+
+DOB=IntVar()
+dob_entry=Entry(Heading_entry,textvariable=DOB,width=10,font="Arial 15",bg="white",fg="black",bd=0).place(x=650,y=100)
 
 
 root.mainloop()
