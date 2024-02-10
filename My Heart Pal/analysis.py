@@ -195,11 +195,11 @@ oldpeak_entry.place(x=100,y=410)
 square_report_image = PhotoImage(file="D:/Project/Python AI Projects/My Heart Pal/My Heart Pal Report window.png")
 # Create a Label widget to contain the image
 report_background = Label(root, image=square_report_image, bg=background,width=535,height=500)
-report_background.place(x=800, y=340)
+report_background.place(x=980, y=340)
 report=Label(root,font="arial 25 bold",bg="white",fg="black",text="Hi")
-report.place(x=820,y=460)
+report.place(x=1000,y=460)
 report1=Label(root,font="arial 12 bold",bg="white",fg="black",text="hello")
-report1.place(x=820,y=540)
+report1.place(x=1000,y=540)
 
 
 
