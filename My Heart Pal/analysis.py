@@ -63,4 +63,14 @@ DOB=IntVar()
 dob_entry=Entry(Heading_entry,textvariable=DOB,width=10,font="Arial 15",bg="white",fg="black",bd=0).place(x=650,y=100)
 
 
+#Body Portion
+Detail_entry=Frame(root,width=600,height=600,bg="#FDD0D3")
+Detail_entry.place(x=0,y=335)
+
+#radio Button
+Label(Detail_entry,text="Sex: ",font="arial 13",bg=framebg,fg=framefg).place(x=10,y=10)
+Label(Detail_entry,text="Fbs: ",font="arial 13",bg=framebg,fg=framefg).place(x=180,y=10)
+Label(Detail_entry,text="Exang: ",font="arial 13",bg=framebg,fg=framefg).place(x=335,y=10)
+
+
 root.mainloop()
