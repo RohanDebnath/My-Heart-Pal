@@ -134,4 +134,17 @@ Label(Detail_entry,text="ca:",font="arial 13",width=8,bg=framebg,fg=framefg).pla
 Label(Detail_entry,text="thal:",font="arial 13",width=8,bg=framebg,fg=framefg).place(x=10,y=210)
 
 
+cp_combobox=Combobox(Detail_entry,values=["0=typical angina","1=atypical angina","2=non-angial pain","3-asymtomatic"],font="arial 12",state="r",width=20)
+restecg_combobox=Combobox(Detail_entry,values=["0","1","2"],font="arial 12",state="r",width=20)
+slope_combobox=Combobox(Detail_entry,values=["0=unsloping","1=flat","2=downsloping"],font="arial 12",state="r",width=20)
+ca_combobox=Combobox(Detail_entry,values=["0","1","2","3","4"],font="arial 12",state="r",width=20)
+thal_combobox=Combobox(Detail_entry,values=["0","1","2","3"],font="arial 12",state="r",width=20)
+
+cp_combobox.place(x=100,y=50)
+restecg_combobox.place(x=100,y=90)
+slope_combobox.place(x=100,y=130)
+ca_combobox.place(x=100,y=170)
+thal_combobox.place(x=100,y=210)
+
+
 root.mainloop()
