@@ -201,6 +201,48 @@ report.place(x=1000,y=460)
 report1=Label(root,font="arial 12 bold",bg="white",fg="black",text="hello")
 report1.place(x=1000,y=540)
 
+#Graph
+graph_image=PhotoImage(file="D:\Project\Python AI Projects\My Heart Pal\graph.png")
+Label(image=graph_image).place(x=600,y=340)
+Label(image=graph_image).place(x=800,y=340)
+Label(image=graph_image).place(x=600,y=540)
+Label(image=graph_image).place(x=800,y=540)
+
+#Analysis Button
+analysis_button=PhotoImage(file="D:\Project\Python AI Projects\My Heart Pal\Analysis button.png")
+Button(root,image=analysis_button,bg="#FDD0D3",border=0,cursor="hand2").place(x=400,y=720)
+
+#Info Button
+info_button=PhotoImage(file="D:\Project\Python AI Projects\My Heart Pal\info-icon.png")
+Button(root,image=info_button,bd=0,bg=background,cursor="hand2").place(x=1450,y=390)
+
+#save  button
+save_btn=PhotoImage(file="D:\Project\Python AI Projects\My Heart Pal\save button.png")
+Button(root,image=save_btn,bg=background,bd=0,cursor="hand2").place(x=1450,y=450)
+
+#Smoking and Non Smoking
+button_mode = True
+choice = "Smoking"
+
+def changemode():
+    global button_mode
+    global choice
+    if button_mode:
+        choice = "non_Smoking"
+        mode.config(image=Nonsmoking_icon, activebackground="white")
+        button_mode = False
+    else:
+        choice = "Smoking"
+        mode.config(image=smoking_icon, activebackground="white")
+        button_mode = True
+    
+    print(choice)
+
+Nonsmoking_icon = PhotoImage(file="D:/Project/Python AI Projects/My Heart Pal/smoker na.png")
+smoking_icon = PhotoImage(file="D:/Project/Python AI Projects/My Heart Pal/smoker.png")
+
+mode = Button(root, image=Nonsmoking_icon, bg="white", cursor="hand2", height=25, command=changemode)
+mode.place(x=100, y=585)
 
 
 root.mainloop()
