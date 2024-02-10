@@ -1,1 +1,1 @@
-Learning
+root.resizable(False,False)
