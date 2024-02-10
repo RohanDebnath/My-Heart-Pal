@@ -133,6 +133,30 @@ Label(Detail_entry,text="slope:",font="arial 13",width=8,bg=framebg,fg=framefg).
 Label(Detail_entry,text="ca:",font="arial 13",width=8,bg=framebg,fg=framefg).place(x=10,y=170)
 Label(Detail_entry,text="thal:",font="arial 13",width=8,bg=framebg,fg=framefg).place(x=10,y=210)
 
+def selection4():
+    input=cp_combobox.get()
+    if input=="0=typical angina":
+        return(0)
+    elif input=="1=atypical angina":
+        return(1)
+    elif input=="2=non-angial pain":
+        return(2)
+    elif input=="3-asymtomatic":
+        return(3)
+    else:
+        print(exang)
+
+def selection4():
+    input=slope_combobox.get()
+    if input=="0=unsloping":
+        return(0)
+    elif input=="1=flat":
+        return(1)
+    elif input=="2=downsloping":
+        return(2)
+    else:
+        print(exang)
+
 
 cp_combobox=Combobox(Detail_entry,values=["0=typical angina","1=atypical angina","2=non-angial pain","3-asymtomatic"],font="arial 12",state="r",width=20)
 restecg_combobox=Combobox(Detail_entry,values=["0","1","2"],font="arial 12",state="r",width=20)
@@ -146,5 +170,25 @@ slope_combobox.place(x=100,y=130)
 ca_combobox.place(x=100,y=170)
 thal_combobox.place(x=100,y=210)
 
+#DataEntry Box
+Label(Detail_entry,text="Smoking",font="arial 13",width=8,bg=framebg,fg=framefg).place(x=10,y=250)
+Label(Detail_entry,text="trestbps",font="arial 13",width=8,bg=framebg,fg=framefg).place(x=10,y=290)
+Label(Detail_entry,text="chol",font="arial 13",width=8,bg=framebg,fg=framefg).place(x=10,y=330)
+Label(Detail_entry,text="thalach",font="arial 13",width=8,bg=framebg,fg=framefg).place(x=10,y=370)
+Label(Detail_entry,text="oldpeak",font="arial 13",width=8,bg=framebg,fg=framefg).place(x=10,y=410)
+
+trestbps=StringVar()
+chol=StringVar()
+thalach=StringVar()
+oldpeak=StringVar()
+
+trestbps_entry=Entry(Detail_entry,textvariable=trestbps,width=20,font="arial 12",bg="white",fg="black",bd=0)
+chol_entry=Entry(Detail_entry,textvariable=chol,width=20,font="arial 12",bg="white",fg="black",bd=0)
+thalach_entry=Entry(Detail_entry,textvariable=thalach,width=20,font="arial 12",bg="white",fg="black",bd=0)
+oldpeak_entry=Entry(Detail_entry,textvariable=oldpeak,width=20,font="arial 12",bg="white",fg="black",bd=0)
+trestbps_entry.place(x=100,y=290)
+chol_entry.place(x=100,y=330)
+thalach_entry.place(x=100,y=370)
+oldpeak_entry.place(x=100,y=410)
 
 root.mainloop()
