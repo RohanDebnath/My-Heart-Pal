@@ -1,9 +1,11 @@
 from tkinter import *
+import datetime
 from datetime import date
 from tkinter.ttk import Combobox
 import tkinter as tk 
 from tkinter import ttk 
 import os 
+from tkinter import messagebox
 import matplotlib
 
 matplotlib.use("TkAgg")
@@ -23,6 +25,72 @@ root.geometry("1450x730+60+80")
 root.state('zoomed')
 # root.resizable(False,False)
 root.config(bg=background)
+
+#analysis
+
+def analysisOfHeart():
+    name=Name.get()
+    D1=Date.get()
+    today=datetime.date.today()
+    A=today.year-DOB.get()
+
+    try:
+        B=selection()
+    except:
+        messagebox.showerror("Missing", "please select Gender!!")
+        return
+
+    try:
+        F=selection2()
+    except:
+        messagebox.showerror("Missing", "please select fbs!!")
+        return
+
+    try:
+        I=selection3()
+    except:
+        messagebox.showerror("Missing", "please select exang!!")
+        return
+
+    try:
+        C=int(selection4())
+    except:
+        messagebox.showerror("Missing", "please select cp!!")
+        return
+ 
+    try:
+        K=int(selection5())
+    except: 
+        messagebox.showerror("Missing", "please select slope!!")
+        return
+    try:
+        G=int(restecg_combobox.get())
+    except: 
+        messagebox.showerror("Missing", "please select resteg!!")
+        return 
+    try:
+        L=int(ca_combobox.get())
+    except: 
+        messagebox.showerror("Missing", "please select ca!!")
+        return   
+    try:
+        M=int(thal_combobox.get())
+    except: 
+        messagebox.showerror("Missing", "please select thal!!")
+        return
+    try:
+        D=int(trestbps.get())
+        E=int(chol.get())
+        H=int(thalach.get())
+        J=int(oldpeak.get())
+    except:
+        messagebox.showerror("Missing data","Few Data are missing")
+        return
+    
+
+
+
+
 #Opening info window by button 
 def Info():
     Icon_window=Toplevel(root)
@@ -175,7 +243,7 @@ def selection4():
     else:
         print(exang)
 
-def selection4():
+def selection5():
     input=slope_combobox.get()
     if input=="0=unsloping":
         return(0)
@@ -239,7 +307,7 @@ Label(image=graph_image).place(x=800,y=540)
 
 #Analysis Button
 analysis_button=PhotoImage(file="D:\Project\Python AI Projects\My Heart Pal\Analysis button.png")
-Button(root,image=analysis_button,bg="#FDD0D3",border=0,cursor="hand2").place(x=400,y=720)
+Button(root,image=analysis_button,bg="#FDD0D3",border=0,cursor="hand2",command=analysisOfHeart).place(x=400,y=720)
 
 #Info Button
 info_button=PhotoImage(file="D:\Project\Python AI Projects\My Heart Pal\info-icon.png")
