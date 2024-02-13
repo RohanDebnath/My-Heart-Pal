@@ -15,6 +15,7 @@ from matplotlib.figure import Figure
 from matplotlib.figure import Figure
 import numpy as np 
 import matplotlib.pyplot as plt 
+from backend import *
 
 background="#f0ddd5"
 framebg="#62a7ff"
@@ -132,6 +133,25 @@ def analysisOfHeart():
     canvas4.get_tk_widget().pack(side=tk.BOTTOM, fill=tk.BOTH, expand=True)
     canvas4.get_tk_widget().place(width=158, height=165, x=800, y=540)
 
+    #Input data
+    input_data=(A,B,C,D,E,F,G,H,I,J,K,L,M)
+    input_data_as_numpy_array=np.asanyarray(input_data)
+
+    #Reshape the numpy array as we are predicting  for only  on instance
+    input_data_reshape=input_data_as_numpy_array.reshape(1,-1)
+    prediction=model.predict(input_data_reshape)
+    print(prediction[0])
+    if(prediction[0]==0):
+        print("The person does not have a heart disease")
+        report.config(text=f"Report:{0}",fg="black")
+        report1.config(text=f"{name} You do not have a heart disease")
+
+    else:
+        print("The person have a heart disease")
+        report.config(text=f"Report:{1}",fg="black")
+        report1.config(text=f"{name} You  have a heart disease")
+
+
 
 #Opening info window by button 
 def Info():
@@ -179,7 +199,7 @@ Heading_entry.place(x=0, y=0)
 Label(Heading_entry, text="Registration No:", font="Arial 13", bg="#FDD0D3", fg="black").place(x=10, y=20)
 Label(Heading_entry, text="Date:", font="Arial 13", bg="#FDD0D3", fg="black").place(x=550, y=20)
 Label(Heading_entry, text="Patient Name:", font="Arial 13", bg="#FDD0D3", fg="black").place(x=10, y=100)
-Label(Heading_entry, text="Date of Birth:", font="Arial 13", bg="#FDD0D3", fg="black").place(x=550, y=100)
+Label(Heading_entry, text="Birth Year:", font="Arial 13", bg="#FDD0D3", fg="black").place(x=550, y=100)
 
 Label(Heading_entry, font="Arial 13", bg="white",width=30, fg="black").place(x=150, y=20)
 Label(Heading_entry, font="Arial 13", bg="white",width=30, fg="black").place(x=650, y=20)
