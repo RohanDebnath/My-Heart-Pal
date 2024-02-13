@@ -9,7 +9,8 @@ from tkinter import messagebox
 import matplotlib
 
 matplotlib.use("TkAgg")
-from matplotlib.backends.backend_tkagg import FigureCanvasAgg
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+from matplotlib.figure import Figure
 
 from matplotlib.figure import Figure
 import numpy as np 
@@ -86,9 +87,16 @@ def analysisOfHeart():
     except:
         messagebox.showerror("Missing data","Few Data are missing")
         return
-    
 
-
+    # First Graph
+    f = Figure(figsize=(5, 5), dpi=100)
+    a = f.add_subplot(111)
+    a.plot(["Sex", "fbs", "exang"], [B, F, I])
+    # Create a FigureCanvasTkAgg object
+    canvas = FigureCanvasTkAgg(f, master=root)
+    canvas.draw()
+    canvas.get_tk_widget().pack(side=tk.BOTTOM, fill=tk.BOTH, expand=True)
+    canvas.get_tk_widget().place(width=158, height=165, x=600, y=340)
 
 
 #Opening info window by button 
