@@ -102,12 +102,35 @@ def analysisOfHeart():
     # Second Graph
     f2 = Figure(figsize=(5, 5), dpi=100)
     a2 = f2.add_subplot(111)
-    a2.plot(["age ", "tresbps ", "chol ","thalach   "], [A, D, E, H])
+    a2.plot(["age ", "tresbps ", "chol ","thalach "], [A, D, E, H])
     # Create a FigureCanvasTkAgg object
     canvas2 = FigureCanvasTkAgg(f2, master=root)
     canvas2.draw()
     canvas2.get_tk_widget().pack(side=tk.BOTTOM, fill=tk.BOTH, expand=True)
     canvas2.get_tk_widget().place(width=158, height=165, x=800, y=340)
+
+
+    # third Graph
+    f3 = Figure(figsize=(5, 5), dpi=100)
+    a3 = f3.add_subplot(111)
+    a3.plot(["oldpeak ", "resticg ","cp "], [J,G,C])
+    # Create a FigureCanvasTkAgg object
+    canvas3 = FigureCanvasTkAgg(f3, master=root)
+    canvas3.draw()
+    canvas3.get_tk_widget().pack(side=tk.BOTTOM, fill=tk.BOTH, expand=True)
+    canvas3.get_tk_widget().place(width=158, height=165, x=600, y=540)
+
+
+
+    # fourth Graph
+    f4 = Figure(figsize=(5, 5), dpi=100)
+    a4 = f4.add_subplot(111)
+    a4.plot(["slope ", "ca ","thal "], [K,L,M])
+    # Create a FigureCanvasTkAgg object
+    canvas4 = FigureCanvasTkAgg(f4, master=root)
+    canvas4.draw()
+    canvas4.get_tk_widget().pack(side=tk.BOTTOM, fill=tk.BOTH, expand=True)
+    canvas4.get_tk_widget().place(width=158, height=165, x=800, y=540)
 
 
 #Opening info window by button 
