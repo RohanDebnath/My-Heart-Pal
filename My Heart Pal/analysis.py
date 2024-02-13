@@ -99,6 +99,17 @@ def analysisOfHeart():
     canvas.get_tk_widget().place(width=158, height=165, x=600, y=340)
 
 
+    # Second Graph
+    f2 = Figure(figsize=(5, 5), dpi=100)
+    a2 = f2.add_subplot(111)
+    a2.plot(["age ", "tresbps ", "chol ","thalach   "], [A, D, E, H])
+    # Create a FigureCanvasTkAgg object
+    canvas2 = FigureCanvasTkAgg(f2, master=root)
+    canvas2.draw()
+    canvas2.get_tk_widget().pack(side=tk.BOTTOM, fill=tk.BOTH, expand=True)
+    canvas2.get_tk_widget().place(width=158, height=165, x=800, y=340)
+
+
 #Opening info window by button 
 def Info():
     Icon_window=Toplevel(root)
